@@ -1,0 +1,10 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+  <h1>Cadastro de usuários</h1>
+  <p>Projeto de estudo: utilize apenas nomes e idades fictícios na demonstração.</p>
+  <form action="{% url 'listagem_usuarios' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Cadastrar usuário</button>
+  </form>
+{% endblock %}

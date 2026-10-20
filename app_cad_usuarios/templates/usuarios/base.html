@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Cadastro de usuários{% endblock %}</title>
+  <style>
+    body { margin:0; font:1rem/1.5 system-ui,sans-serif; color:#182b42; background:#f4f7fb; }
+    nav { padding:1rem max(1rem,calc((100% - 800px)/2)); background:#182b42; }
+    nav a { color:white; margin-right:1.25rem; }
+    main { max-width:800px; margin:2rem auto; padding:1.5rem; background:white; border-radius:.5rem; }
+    label { display:block; font-weight:600; }
+    input { box-sizing:border-box; max-width:100%; padding:.6rem; border:1px solid #63758c; border-radius:.25rem; }
+    button { background:#174f96; color:white; border:0; padding:.7rem 1.2rem; border-radius:.25rem; cursor:pointer; }
+    a { color:#174f96; } :focus-visible { outline:3px solid #dd9100; outline-offset:3px; }
+    .errorlist { color:#a21a27; } table { border-collapse:collapse; width:100%; }
+    caption { text-align:left; padding-bottom:1rem; } th,td { text-align:left; padding:.6rem; border-bottom:1px solid #d1d9e4; overflow-wrap:anywhere; }
+    @media(max-width:600px) { main { margin:1rem; padding:1rem; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="Navegação principal">
+    <a href="{% url 'home' %}">Cadastrar</a>
+    <a href="{% url 'listagem_usuarios' %}">Ver usuários</a>
+  </nav>
+  <main>{% block conteudo %}{% endblock %}</main>
+</body>
+</html>
